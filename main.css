@@ -33,10 +33,68 @@ h1,h2,h3,p,li,ul {
    }
 
 
-
+   .mobile_nav {
+       width: 250px;
+       background: black;
+       display: flex;
+       flex-direction: column;
+       color: white;
+       position: absolute;
+       top:0;
+       left: 0;
+       height: 100vh;
+       z-index: 999999999999999999;
+       padding-top: 2em;
+       justify-content: space-around;
+       align-items: center;
+       transition: all linear 100ms;
+   }
+.hide {
+    left: -250px !important;
+}
 @media only screen and (min-width: 800px) {
     .hero_video {
-        height:60px;
-        width: 100vw;
+        /* height:60px; */
+        /* width: 100vw; */
     }
+  }
+
+  @media only screen and (max-width: 370px) {
+    /* .hero_video {
+        top: 50px;
+        height: auto;
+    } */
+   .mobile_nav {
+    width: 100vw;
+   }
+   .hide {
+       left: -100vw !important;
+   }
+   .close_button {
+       position: absolute;
+       top: 20px;
+       left: 40px;
+   }
+   .mob_text {
+       top: 75px !important;
+   }
+  }
+  @media only screen and (min-width: 800px) {
+    /* .hero_video {
+        top: 50px;
+        height: auto;
+    } */
+   .mob_text {
+       top: 170px !important;
+   }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    /* .hero_video {
+        top: 50px;
+        height: auto;
+    } */
+   .mob_text {
+       top: 90px !important;
+   }
   }
